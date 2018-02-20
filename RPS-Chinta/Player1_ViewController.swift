@@ -68,6 +68,7 @@ class Player1_ViewController: UIViewController {
         if p1_name_text_TF.text=="" {
             p1_item_bar_LBL.title="Player 1"
         }
+        AppDelegate.model.setP1name(p1_item_bar_LBL.title!)
     }
     
     

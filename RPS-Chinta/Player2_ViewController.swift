@@ -65,6 +65,7 @@ class Player2_ViewController: UIViewController {
         if p2_name_text_TF.text=="" {
             p2_item_bar_LBL.title="Player 2"
         }
+        AppDelegate.model.setP2name(p2_item_bar_LBL.title!)
     }
     
     @IBOutlet weak var p2_rockBTN: UIButton!

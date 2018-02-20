@@ -43,7 +43,7 @@ class ResultsViewController: UIViewController {
             reset_BTN_Action(true)
         }else{
         if AppDelegate.model.haveResult(){
-            results_LBL.text = AppDelegate.model.winner()
+            results_LBL.text = "Results: "+AppDelegate.model.winner()
             playerStatus_LBL.text="Both selected an option."
             AppDelegate.model.p1Choice = .None
             AppDelegate.model.p2Choice = .None
@@ -52,16 +52,16 @@ class ResultsViewController: UIViewController {
         {
             results_LBL.text="Round not yet completed.\nBelow are the actions to be taken."
             if AppDelegate.model.p1Choice == .None{
-                playerStatus_LBL.text = "Player1 did not respond"
+                playerStatus_LBL.text = "\(AppDelegate.model.p1name) did not respond"
             }
             if AppDelegate.model.p2Choice == .None{
-                playerStatus_LBL.text = "Player2 did not respond"
+                playerStatus_LBL.text = "\(AppDelegate.model.p2name) did not respond"
             }
             if AppDelegate.model.p1Choice == .None && AppDelegate.model.p2Choice == .None{
-                playerStatus_LBL.text = "Both players did not respond"
+                playerStatus_LBL.text = "Both \(AppDelegate.model.p1name),\(AppDelegate.model.p2name) did not respond"
             }
         }
-            player_count_LBL.text = "Player1 won \(AppDelegate.model.p1_win_count) times. \nPlayer2 won \(AppDelegate.model.p2_win_count) times."
+            player_count_LBL.text = "Score:\n\t\t\(AppDelegate.model.p1name):  \(AppDelegate.model.p1_win_count)\n\t\t\(AppDelegate.model.p2name):  \(AppDelegate.model.p2_win_count)"
         }
         
     }
@@ -72,6 +72,15 @@ class ResultsViewController: UIViewController {
         results_LBL.text="Make your selection on the other tabs"
         playerStatus_LBL.text=""
         player_count_LBL.text=""
+    }
+    @IBAction func new_GameBTN(_ sender: Any) {
+        AppDelegate.model.choosePlayer1(pick: .None)
+        AppDelegate.model.choosePlayer2(pick: .None)
+        AppDelegate.model.setReset(true)
+        results_LBL.text="Make your selection on the other tabs"
+        playerStatus_LBL.text=""
+        player_count_LBL.text=""
+        self.tabBarController?.selectedIndex=1
     }
     
 

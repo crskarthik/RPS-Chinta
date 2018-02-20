@@ -80,12 +80,12 @@ class RPSModel
     }
     
     func winner() -> String{
-        //        player1choice == .Rock && player2choice == .Paper)||(player1choice == .Rock && player1choice == .Spock) || (player1choice == .Paper && player2choice == .Scissors) || (player1choice == .Paper && player1choice == .Lizard) || (player1choice == .Scissors && player2choice == .Rock) || (player1choice == .Scissors && player1choice == .Spock)||(player1choice == .Lizard && player1choice == .Rock) || (player1choice == .Lizard && player1choice == .Scissors) || (player1choice == .Spock && player1choice == .Paper) || (player1choice == .Spock && player1choice == .Lizard){
 
-        if((p1Choice == .Rock && p2Choice == .Paper)||(p1Choice == .Scissors && p2Choice == .Rock)||(p1Choice == .Paper && p2Choice == .Scissors)||(p1Choice == .Rock && p2Choice == .Spock)||(p1Choice == .Paper && p2Choice == .Lizard)||(p1Choice == .Scissors && p2Choice == .Spock)||())
+
+        if((p1Choice == .Rock && p2Choice == .Paper)||(p1Choice == .Scissors && p2Choice == .Rock)||(p1Choice == .Paper && p2Choice == .Scissors)||(p1Choice == .Rock && p2Choice == .Spock)||(p1Choice == .Paper && p2Choice == .Lizard)||(p1Choice == .Scissors && p2Choice == .Spock)||(p1Choice == .Lizard && p2Choice == .Rock)||(p1Choice == .Lizard && p2Choice == .Scissors)||(p1Choice == .Spock && p2Choice == .Paper)||(p1Choice == .Spock && p2Choice == .Lizard))
         {
             p2_win_count += 1
-            return "Player2 Wins"
+            return "\(p2name) Wins"
         }
         else if p1Choice == p2Choice
         {
@@ -93,7 +93,7 @@ class RPSModel
         }
         else{
             p1_win_count+=1
-            return "Player1 Wins"
+            return "\(p1name) Wins"
         }
     }
     
@@ -104,7 +104,15 @@ class RPSModel
     func choosePlayer2(pick:Choice) {
         p2Choice = pick
     }
-    
+    var p1name:String = "Player 1"
+    var p2name:String = "Player 2"
+
+    func setP1name(_ name:String){
+        p1name = name
+    }
+    func setP2name(_ name:String){
+        p2name = name
+    }
     class func sharedRPS() -> RPSModel {
         return SharedRPSModel
     }
