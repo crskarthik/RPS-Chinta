@@ -45,11 +45,18 @@ class Player1_ViewController: UIViewController {
     @IBOutlet weak var p1_rockBTN: UIButton!
     @IBOutlet weak var p1_paperBTN: UIButton!
     @IBOutlet weak var p1_scissorsBTN: UIButton!
-    
     @IBOutlet weak var p1_status_LBL: UILabel!
-    @IBAction func p1_rockActionBTN(_ sender: Any) {
-        AppDelegate.model.choosePlayer1(pick: .Rock)
-//        p1_status_LBL.text="\(#imageLiteral(resourceName: "Rock")) is selected"
-    }
     
+    @IBAction func p1_rockActionBTN(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer1(pick: .Rock)
+        p1_status_LBL.text="Rock selected"
+    }
+    @IBAction func p1_paperActionBTN(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer1(pick: .Paper)
+        p1_status_LBL.text="Paper selected"
+    }
+    @IBAction func p1_sicssorsActionBTN(_ sender: UIButton) {
+        AppDelegate.model.choosePlayer1(pick: .Scissors)
+        p1_status_LBL.text="Scissors selected"
+    }
 }

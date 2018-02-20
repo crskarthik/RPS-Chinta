@@ -35,26 +35,6 @@
                                     <action selector="p1_name_change_TF:" destination="vCs-O6-0fh" eventType="editingChanged" id="MG0-Bt-rU5"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FiH-xW-Qna">
-                                <rect key="frame" x="83" y="299" width="68" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title=" " image="Rock">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBorder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="p1_rockActionBTN:" destination="vCs-O6-0fh" eventType="touchDown" id="dLQ-2j-lj1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-qQ-XlG">
                                 <rect key="frame" x="159" y="299" width="67" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,6 +48,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p1_paperActionBTN:" destination="vCs-O6-0fh" eventType="touchUpInside" id="wQ8-pR-bik"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eK6-ek-pMr">
                                 <rect key="frame" x="234" y="299" width="69" height="70"/>
@@ -82,14 +65,37 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p1_sicssorsActionBTN:" destination="vCs-O6-0fh" eventType="touchUpInside" id="th0-Rr-MaQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJn-tY-eHR">
-                                <rect key="frame" x="16" y="220" width="270" height="37"/>
+                                <rect key="frame" x="16" y="221" width="270" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3B-7u-gYr">
+                                <rect key="frame" x="83" y="299" width="68" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" image="Rock">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBorder" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p1_rockActionBTN:" destination="vCs-O6-0fh" eventType="touchUpInside" id="S85-Ar-VPJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="NsP-gc-f4l"/>
@@ -99,7 +105,7 @@
                         <outlet property="p1_item_bar_LBL" destination="iRt-UN-L9C" id="amW-I7-V68"/>
                         <outlet property="p1_name_text_TF" destination="UWe-TT-3bZ" id="azh-7z-ZLH"/>
                         <outlet property="p1_paperBTN" destination="ymH-qQ-XlG" id="rvc-AG-PN9"/>
-                        <outlet property="p1_rockBTN" destination="FiH-xW-Qna" id="fyj-3V-zZg"/>
+                        <outlet property="p1_rockBTN" destination="e3B-7u-gYr" id="E4U-bh-4KP"/>
                         <outlet property="p1_scissorsBTN" destination="eK6-ek-pMr" id="sj2-di-6EV"/>
                         <outlet property="p1_status_LBL" destination="YJn-tY-eHR" id="R9q-sz-xW9"/>
                         <outlet property="player1_LBL" destination="x5L-Ia-OyS" id="ldJ-Wd-Vz5"/>
@@ -178,6 +184,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p2_rockActionBTN:" destination="VGm-3L-VgW" eventType="touchUpInside" id="ON6-lo-QJc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYR-LL-PiT">
                                 <rect key="frame" x="159" y="299" width="67" height="70"/>
@@ -192,6 +201,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p2_paperActionBTN:" destination="VGm-3L-VgW" eventType="touchUpInside" id="sWt-ip-E9h"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SLw-g0-ZbZ">
                                 <rect key="frame" x="16" y="119" width="343" height="30"/>
@@ -216,6 +228,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p2_sicssorsActionBTN:" destination="VGm-3L-VgW" eventType="touchUpInside" id="RST-Iw-GLj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wb-B7-dYX">
                                 <rect key="frame" x="16" y="221" width="270" height="37"/>
@@ -232,6 +247,10 @@
                     <connections>
                         <outlet property="p2_item_bar_LBL" destination="oc6-Qz-1rm" id="wD0-OK-tyD"/>
                         <outlet property="p2_name_text_TF" destination="SLw-g0-ZbZ" id="GM0-CE-wL8"/>
+                        <outlet property="p2_paperBTN" destination="GYR-LL-PiT" id="9CL-UD-12c"/>
+                        <outlet property="p2_rockBTN" destination="0Tt-3G-Ete" id="aRo-1c-FX7"/>
+                        <outlet property="p2_scissorsBTN" destination="jTk-hZ-1x0" id="IIf-J5-2x9"/>
+                        <outlet property="p2_status_LBL" destination="9wb-B7-dYX" id="vZc-iV-SBt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ia7-ml-oG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
