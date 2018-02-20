@@ -21,7 +21,15 @@ class Player1_ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     @IBOutlet weak var player1_LBL: UILabel!
     @IBOutlet weak var p1_name_text_TF: UITextField!
     @IBOutlet weak var p1_item_bar_LBL: UITabBarItem!
@@ -32,14 +40,14 @@ class Player1_ViewController: UIViewController {
             p1_item_bar_LBL.title="Player 1"
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func p1_name() -> String {
+        return p1_item_bar_LBL.title!
     }
-    */
+    
+    
+    @IBOutlet weak var p1_rockBTN: UIButton!
+    @IBOutlet weak var p1_paperBTN: UIButton!
+    @IBOutlet weak var p1_scissorsBTN: UIButton!
+    
 
 }

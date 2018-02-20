@@ -30,6 +30,9 @@ class Player2_ViewController: UIViewController {
             p2_item_bar_LBL.title="Player 2"
         }
     }
+    func p2_name() -> String {
+        return p2_item_bar_LBL.title!
+    }
     /*
     // MARK: - Navigation
 
