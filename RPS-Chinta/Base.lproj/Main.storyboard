@@ -51,6 +51,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="p1_rockActionBTN:" destination="vCs-O6-0fh" eventType="touchDown" id="dLQ-2j-lj1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-qQ-XlG">
                                 <rect key="frame" x="159" y="299" width="67" height="70"/>
@@ -80,6 +83,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJn-tY-eHR">
+                                <rect key="frame" x="16" y="220" width="270" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="NsP-gc-f4l"/>
@@ -92,6 +102,7 @@
                         <outlet property="p1_paperBTN" destination="ymH-qQ-XlG" id="rvc-AG-PN9"/>
                         <outlet property="p1_rockBTN" destination="FiH-xW-Qna" id="fyj-3V-zZg"/>
                         <outlet property="p1_scissorsBTN" destination="eK6-ek-pMr" id="sj2-di-6EV"/>
+                        <outlet property="p1_status_LBL" destination="YJn-tY-eHR" id="R9q-sz-xW9"/>
                         <outlet property="player1_LBL" destination="x5L-Ia-OyS" id="ldJ-Wd-Vz5"/>
                     </connections>
                 </viewController>
@@ -207,6 +218,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make a selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wb-B7-dYX">
+                                <rect key="frame" x="16" y="221" width="270" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="LjM-0P-KKL"/>
@@ -220,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ia7-ml-oG5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="1127"/>
+            <point key="canvasLocation" x="-289" y="1127"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uTr-dX-8SI">

@@ -49,5 +49,10 @@ class Player1_ViewController: UIViewController {
     @IBOutlet weak var p1_paperBTN: UIButton!
     @IBOutlet weak var p1_scissorsBTN: UIButton!
     
+    @IBOutlet weak var p1_status_LBL: UILabel!
+    @IBAction func p1_rockActionBTN(_ sender: Any) {
+        AppDelegate.model.choosePlayer1(pick: .Rock)
 
+    }
+    
 }
