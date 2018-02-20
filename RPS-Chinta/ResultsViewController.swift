@@ -48,7 +48,7 @@ class ResultsViewController: UIViewController {
         }
         else
         {
-            results_LBL.text="Round not yet completed.\n Below are the actions to be taken."
+            results_LBL.text="Round not yet completed.\nBelow are the actions to be taken."
             if AppDelegate.model.p1Choice == .None{
                 playerStatus_LBL.text = "Player1 did not respond"
             }
@@ -59,7 +59,7 @@ class ResultsViewController: UIViewController {
                 playerStatus_LBL.text = "Both players did not respond"
             }
         }
-            player_count_LBL.text = "Player1 won \(AppDelegate.model.p1_win_count) times. \n Player2 won \(AppDelegate.model.p2_win_count) times."
+            player_count_LBL.text = "Player1 won \(AppDelegate.model.p1_win_count) times. \nPlayer2 won \(AppDelegate.model.p2_win_count) times."
         }
         
     }
