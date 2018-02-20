@@ -39,7 +39,7 @@
                                 <rect key="frame" x="83" y="299" width="68" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" image="Rock">
+                                <state key="normal" title=" " image="Rock">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -97,7 +97,6 @@
                     <tabBarItem key="tabBarItem" title="Player1" image="Player1" id="iRt-UN-L9C"/>
                     <connections>
                         <outlet property="p1_item_bar_LBL" destination="iRt-UN-L9C" id="amW-I7-V68"/>
-                        <outlet property="p1_name" destination="iRt-UN-L9C" id="dgq-nu-NWb"/>
                         <outlet property="p1_name_text_TF" destination="UWe-TT-3bZ" id="azh-7z-ZLH"/>
                         <outlet property="p1_paperBTN" destination="ymH-qQ-XlG" id="rvc-AG-PN9"/>
                         <outlet property="p1_rockBTN" destination="FiH-xW-Qna" id="fyj-3V-zZg"/>
@@ -232,7 +231,6 @@
                     <tabBarItem key="tabBarItem" title="Player2" image="Player2" id="oc6-Qz-1rm"/>
                     <connections>
                         <outlet property="p2_item_bar_LBL" destination="oc6-Qz-1rm" id="wD0-OK-tyD"/>
-                        <outlet property="p2_name" destination="oc6-Qz-1rm" id="heB-Wn-WkA"/>
                         <outlet property="p2_name_text_TF" destination="SLw-g0-ZbZ" id="GM0-CE-wL8"/>
                     </connections>
                 </viewController>

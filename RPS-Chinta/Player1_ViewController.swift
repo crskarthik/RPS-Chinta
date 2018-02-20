@@ -40,9 +40,6 @@ class Player1_ViewController: UIViewController {
             p1_item_bar_LBL.title="Player 1"
         }
     }
-    public func p1_name() -> String {
-        return p1_item_bar_LBL.title!
-    }
     
     
     @IBOutlet weak var p1_rockBTN: UIButton!
@@ -52,7 +49,7 @@ class Player1_ViewController: UIViewController {
     @IBOutlet weak var p1_status_LBL: UILabel!
     @IBAction func p1_rockActionBTN(_ sender: Any) {
         AppDelegate.model.choosePlayer1(pick: .Rock)
-
+//        p1_status_LBL.text="\(#imageLiteral(resourceName: "Rock")) is selected"
     }
     
 }
