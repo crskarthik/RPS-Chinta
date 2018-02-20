@@ -70,6 +70,16 @@ class RPSModel
         }
         resetFlag = flag
     }
+    var newgameFlag:Bool = false
+    func setNewGameFlag(_ flag:Bool) {
+        if flag{
+            reset()
+            setP1name("Player 1")
+            setP2name("Player 2")
+        }
+        newgameFlag = flag
+    }
+
     private init() {
         p1Choice = .None
         p2Choice = .None

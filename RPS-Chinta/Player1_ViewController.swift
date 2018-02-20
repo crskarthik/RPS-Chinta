@@ -31,12 +31,17 @@ class Player1_ViewController: UIViewController {
      }
      */
     override func viewWillAppear(_ animated: Bool) {
-         if AppDelegate.model.resetFlag{
+         if AppDelegate.model.newgameFlag{
             p1_item_bar_LBL.title="Player 1"
+            AppDelegate.model.choosePlayer1(pick: .None)
+            p1_status_LBL.text = "Make a selection"
+            p1_name_text_TF.text = nil
+
+        }
+        if AppDelegate.model.resetFlag{
             AppDelegate.model.choosePlayer1(pick: .None)
             AppDelegate.model.choosePlayer2(pick: .None)
             p1_status_LBL.text = "Make a selection"
-            p1_name_text_TF.text = nil
         }
         assignBTNstatus()
     }

@@ -80,7 +80,9 @@ class ResultsViewController: UIViewController {
         results_LBL.text="Make your selection on the other tabs"
         playerStatus_LBL.text=""
         player_count_LBL.text=""
+        AppDelegate.model.setNewGameFlag(true)
         self.tabBarController?.selectedIndex=1
+        
     }
     
 
