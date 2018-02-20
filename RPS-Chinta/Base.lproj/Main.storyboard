@@ -140,7 +140,13 @@
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="NsP-gc-f4l"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player1" image="Player1" id="iRt-UN-L9C"/>
+                    <tabBarItem key="tabBarItem" title="Player1" image="Player1" id="iRt-UN-L9C">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColoe">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="p1_item_bar_LBL" destination="iRt-UN-L9C" id="amW-I7-V68"/>
                         <outlet property="p1_name_text_TF" destination="UWe-TT-3bZ" id="azh-7z-ZLH"/>
@@ -184,15 +190,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-rd-kTb">
-                                <rect key="frame" x="16" y="491" width="343" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="reset_BTN_Action:" destination="fnb-ge-YI8" eventType="touchDown" id="XpL-o0-JfK"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ge-mb-wWP">
                                 <rect key="frame" x="16" y="335" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -200,11 +197,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdo-rd-kTb">
+                                <rect key="frame" x="40" y="514" width="295" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset_BTN_Action:" destination="fnb-ge-YI8" eventType="touchDown" id="XpL-o0-JfK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mdo-rd-kTb" firstAttribute="leading" secondItem="ax9-LY-L7l" secondAttribute="leading" constant="40" id="56u-kB-HUU"/>
+                            <constraint firstItem="ax9-LY-L7l" firstAttribute="bottom" secondItem="Mdo-rd-kTb" secondAttribute="bottom" constant="60" id="kJM-sy-tQn"/>
+                            <constraint firstItem="ax9-LY-L7l" firstAttribute="trailing" secondItem="Mdo-rd-kTb" secondAttribute="trailing" constant="40" id="wsp-9h-I9b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ax9-LY-L7l"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Results" image="Results" id="OQU-aG-tLn"/>
+                    <tabBarItem key="tabBarItem" title="Results" image="Results" id="OQU-aG-tLn">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="playerStatus_LBL" destination="LhW-1w-MmE" id="0We-aT-POX"/>
                         <outlet property="player_count_LBL" destination="4Ge-mb-wWP" id="4Z0-ew-yvY"/>
@@ -345,7 +364,13 @@
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="LjM-0P-KKL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Player2" image="Player2" id="oc6-Qz-1rm"/>
+                    <tabBarItem key="tabBarItem" title="Player2" image="Player2" id="oc6-Qz-1rm">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <connections>
                         <outlet property="p2_item_bar_LBL" destination="oc6-Qz-1rm" id="wD0-OK-tyD"/>
                         <outlet property="p2_name_text_TF" destination="SLw-g0-ZbZ" id="GM0-CE-wL8"/>
@@ -367,6 +392,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="fnb-ge-YI8" kind="relationship" relationship="viewControllers" id="gJy-wV-VfQ"/>

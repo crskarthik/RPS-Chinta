@@ -36,7 +36,7 @@ class Player1_ViewController: UIViewController {
             AppDelegate.model.choosePlayer1(pick: .None)
             AppDelegate.model.choosePlayer2(pick: .None)
             p1_status_LBL.text = "Make a selection"
-            p1_name_text_TF = nil
+            p1_name_text_TF.text = nil
         }
     }
     @IBOutlet weak var player1_LBL: UILabel!

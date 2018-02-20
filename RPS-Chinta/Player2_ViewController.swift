@@ -35,7 +35,7 @@ class Player2_ViewController: UIViewController {
             AppDelegate.model.choosePlayer1(pick: .None)
             AppDelegate.model.choosePlayer2(pick: .None)
             p2_status_LBL.text = "Make a selection"
-            p2_name_text_TF = nil
+            p2_name_text_TF.text = nil
         }
     }
     @IBOutlet weak var p2_item_bar_LBL: UITabBarItem!
