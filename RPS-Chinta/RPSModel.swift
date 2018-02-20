@@ -57,10 +57,18 @@ class RPSModel
             _p2_win_count=newValue
         }
     }
-    
-    func reset(){
+    var resetFlag:Bool = false
+    func reset() {
         p1Choice = .None
         p2Choice = .None
+        p1_win_count = 0
+        p2_win_count = 0
+    }
+    func setReset(_ flag:Bool){
+        if flag{
+            reset()
+        }
+        resetFlag = flag
     }
     private init() {
         p1Choice = .None
@@ -68,7 +76,7 @@ class RPSModel
     }
     
     func haveResult() -> Bool {
-        return !(p1Choice == .None && p2Choice == .None)
+        return p1Choice != .None && p2Choice != .None
     }
     
     func winner() -> String{

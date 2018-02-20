@@ -35,7 +35,13 @@ class ResultsViewController: UIViewController {
     @IBOutlet weak var playerStatus_LBL: UILabel!
     
     @IBOutlet weak var player_count_LBL: UILabel!
+    
+    var loadFlag:Bool = true
     override func viewWillAppear(_ animated: Bool) {
+        if loadFlag {
+            loadFlag=false
+            reset_BTN_Action(true)
+        }else{
         if AppDelegate.model.haveResult(){
             results_LBL.text = AppDelegate.model.winner()
             playerStatus_LBL.text="Both selected an option."
@@ -52,12 +58,15 @@ class ResultsViewController: UIViewController {
             if AppDelegate.model.p1Choice == .None && AppDelegate.model.p2Choice == .None{
                 playerStatus_LBL.text = "Both players did not respond"
             }
+        }
             player_count_LBL.text = "Player1 won \(AppDelegate.model.p1_win_count) times. \n Player2 won \(AppDelegate.model.p2_win_count) times."
         }
+        
     }
     @IBAction func reset_BTN_Action(_ sender: Any) {
         AppDelegate.model.choosePlayer1(pick: .None)
         AppDelegate.model.choosePlayer2(pick: .None)
+        AppDelegate.model.setReset(true)
         results_LBL.text="Make your selection on the other tabs"
         playerStatus_LBL.text=""
         player_count_LBL.text=""

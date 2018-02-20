@@ -30,6 +30,15 @@ class Player1_ViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    override func viewWillAppear(_ animated: Bool) {
+         if AppDelegate.model.resetFlag{
+            p1_item_bar_LBL.title="Player 1"
+            AppDelegate.model.choosePlayer1(pick: .None)
+            AppDelegate.model.choosePlayer2(pick: .None)
+            p1_status_LBL.text = "Make a selection"
+            p1_name_text_TF = nil
+        }
+    }
     @IBOutlet weak var player1_LBL: UILabel!
     @IBOutlet weak var p1_name_text_TF: UITextField!
     @IBOutlet weak var p1_item_bar_LBL: UITabBarItem!
@@ -48,14 +57,17 @@ class Player1_ViewController: UIViewController {
     @IBOutlet weak var p1_status_LBL: UILabel!
     
     @IBAction func p1_rockActionBTN(_ sender: UIButton) {
+        AppDelegate.model.setReset(false)
         AppDelegate.model.choosePlayer1(pick: .Rock)
         p1_status_LBL.text="Rock selected"
     }
     @IBAction func p1_paperActionBTN(_ sender: UIButton) {
+                AppDelegate.model.setReset(false)
         AppDelegate.model.choosePlayer1(pick: .Paper)
         p1_status_LBL.text="Paper selected"
     }
-    @IBAction func p1_sicssorsActionBTN(_ sender: UIButton) {
+    @IBAction func p1_scissorsActionBTN(_ sender: UIButton) {
+                AppDelegate.model.setReset(false)
         AppDelegate.model.choosePlayer1(pick: .Scissors)
         p1_status_LBL.text="Scissors selected"
     }
