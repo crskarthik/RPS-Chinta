@@ -45,6 +45,8 @@ class ResultsViewController: UIViewController {
         if AppDelegate.model.haveResult(){
             results_LBL.text = AppDelegate.model.winner()
             playerStatus_LBL.text="Both selected an option."
+            AppDelegate.model.p1Choice = .None
+            AppDelegate.model.p2Choice = .None
         }
         else
         {
@@ -72,5 +74,6 @@ class ResultsViewController: UIViewController {
         player_count_LBL.text=""
     }
     
+
     
 }

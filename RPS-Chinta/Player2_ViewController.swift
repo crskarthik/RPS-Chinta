@@ -37,6 +37,26 @@ class Player2_ViewController: UIViewController {
             p2_status_LBL.text = "Make a selection"
             p2_name_text_TF.text = nil
         }
+        assignBTNstatus()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        assignBTNstatus()
+    }
+    func assignBTNstatus() {
+        if AppDelegate.model.p2Choice != .None{
+            p2_rockBTN.isEnabled = false
+            p2_paperBTN.isEnabled = false
+            p2_scissorsBTN.isEnabled = false
+            p2_lizardBTN.isEnabled = false
+            p2_spockBTN.isEnabled = false
+        }
+        else{
+            p2_rockBTN.isEnabled = true
+            p2_paperBTN.isEnabled = true
+            p2_scissorsBTN.isEnabled = true
+            p2_lizardBTN.isEnabled = true
+            p2_spockBTN.isEnabled = true
+        }
     }
     @IBOutlet weak var p2_item_bar_LBL: UITabBarItem!
     @IBOutlet weak var p2_name_text_TF: UITextField!
@@ -51,7 +71,8 @@ class Player2_ViewController: UIViewController {
     @IBOutlet weak var p2_paperBTN: UIButton!
     @IBOutlet weak var p2_scissorsBTN: UIButton!
     @IBOutlet weak var p2_status_LBL: UILabel!
-    
+    @IBOutlet weak var p2_lizardBTN: UIButton!
+    @IBOutlet weak var p2_spockBTN: UIButton!
     @IBAction func p2_rockActionBTN(_ sender: UIButton) {
                 AppDelegate.model.setReset(false)
         AppDelegate.model.choosePlayer2(pick: .Rock)
@@ -67,6 +88,16 @@ class Player2_ViewController: UIViewController {
         AppDelegate.model.choosePlayer2(pick: .Scissors)
         p2_status_LBL.text="Scissors selected"
     }
-
+    @IBAction func p2_lizardActionBTN(_ sender: UIButton) {
+        AppDelegate.model.setReset(false)
+        AppDelegate.model.choosePlayer2(pick: .Lizard)
+        p2_status_LBL.text="Lizard selected"
+    }
+    
+    @IBAction func p2_spockActionBTN(_ sender: UIButton) {
+        AppDelegate.model.setReset(false)
+        AppDelegate.model.choosePlayer2(pick: .Spock)
+        p2_status_LBL.text="Spock selected"
+    }
 
 }
